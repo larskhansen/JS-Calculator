@@ -1,0 +1,42 @@
+body, html {
+  font-family: tahoma, sans-serif;
+  font-size 100%;
+}
+
+#calc {
+  margin: 10rem auto;
+}
+
+table {
+  border: 1px solid #e7e4e4;
+}
+
+td {
+  height:2rem;
+  padding: .5rem;
+  text-align: center;
+  border: 1px solid #e7e4e4;
+}
+
+#display {
+  text-align: right;
+  background-color:#604c39;
+  color:#FFF;
+}
+
+.button {
+  cursor:pointer;
+}
+
+.action {
+  background-color:#ff9933;
+  color:#FFF;
+}
+.number {
+  background-color:#b39980;
+  color:#FFF;
+}
+
+.bold {
+  font-weight: bold;
+}
