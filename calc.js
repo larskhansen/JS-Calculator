@@ -4,7 +4,7 @@ document.getElementById("erase").addEventListener("click", function () {
   calc.eraseDisplay();
 });
 
-let numbers = [
+var numbers = [
   "zero",
   "one",
   "two",
@@ -18,14 +18,14 @@ let numbers = [
   "comma"
 ];
 
-let numberClasses = document.getElementsByClassName("number");
+var numberClasses = document.getElementsByClassName("number");
 for (var i = 0; i < numberClasses.length; i++) {
   numberClasses[i].addEventListener("click", function () {
     calc.addNumber(numbers.indexOf(this.id));
   });
 }
 
-let actionClasses = document.getElementsByClassName("action");
+var actionClasses = document.getElementsByClassName("action");
 for (var i = 0; i < actionClasses.length; i++) {
   actionClasses[i].addEventListener("click", function () {
     calc.addAction(this.id);
@@ -73,8 +73,8 @@ function Calculation() {
     } else if (this.firstDigit !== "" && this.secondDigit !== "") {
 
       if (this.action !== "" && this.firstDigit !== "" && this.secondDigit !== "") {
-        let first = parseFloat(this.firstDigit);
-        let second = parseFloat(this.secondDigit);
+        var first = parseFloat(this.firstDigit);
+        var second = parseFloat(this.secondDigit);
         if (this.action === "plus") {
           this.result = first + second;
         } else if (this.action === "minus") {
@@ -122,10 +122,8 @@ function Calculation() {
 
     if (elements[1] !== undefined) {
       element = elements[0] + "," + elements[1];
-      console.log('comma lige her');
     } else {
       element = elements[0];
-      console.log('ingen komma')
     }
     document.getElementById("display").innerHTML = element;
   }
